@@ -19,3 +19,5 @@ jobs:
           echo "This is the third line"
       - name: Echo a secret
         run: echo ${{ secrets.ACTIONS_TEST_SECRET }}
+      - name: Echo a variable
+        run: echo ${{ vars.ACTIONS_TEST_VARIABLE }}
