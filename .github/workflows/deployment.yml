@@ -32,5 +32,9 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key
           chmod 600 private_key
+          # Add EC2 host key to known_hosts
+          ssh-keyscan $EC2_HOST >> ~/.ssh/known_hosts
+          # Secure copy build files to EC2 instance
           scp -i private_key -r build/* $EC2_USER@$EC2_HOST:/usr/share/nginx/html/react-app-ec2/build
+          # Restart Nginx service on EC2 instance
           ssh -i private_key $EC2_USER@$EC2_HOST "sudo systemctl restart nginx"
