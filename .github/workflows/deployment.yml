@@ -32,6 +32,8 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key
           chmod 600 private_key
+          # Create the .ssh directory if it doesn't exist
+          mkdir -p ~/.ssh
           # Add EC2 host key to known_hosts
           ssh-keyscan $EC2_HOST >> ~/.ssh/known_hosts
           # Secure copy build files to EC2 instance
