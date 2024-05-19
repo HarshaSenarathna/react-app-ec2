@@ -5,7 +5,7 @@ const WelcomeScreen = () => {
   return (
     <div className="welcome-container">
       <div className="neon-box">
-        <h1 className="welcome-title">Welcome to Future</h1>
+        <h1 className="welcome-title">Welcome to Future TODAY</h1>
         <p className="welcome-subtitle">Embrace the Future</p>
         <button className="start-button">
           Get Started with ci cd piplines with harsha
