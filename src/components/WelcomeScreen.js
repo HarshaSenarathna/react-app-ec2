@@ -9,7 +9,7 @@ const WelcomeScreen = () => {
         <p className="welcome-subtitle">Embrace the Future</p>
         <p className="welcome-subtitle">Future is here</p>
         <button className="start-button">
-          Get Started with ci cd piplines with harsha
+          Get Started with ci cd piplines with harsha.
         </button>
       </div>
     </div>
